@@ -1,0 +1,15 @@
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\bin\Debug\net6.0\Assignment1.exe
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\bin\Debug\net6.0\Assignment1.deps.json
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\bin\Debug\net6.0\Assignment1.runtimeconfig.json
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\bin\Debug\net6.0\Assignment1.dll
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\bin\Debug\net6.0\Assignment1.pdb
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\obj\Debug\net6.0\Assignment1.csproj.AssemblyReference.cache
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\obj\Debug\net6.0\Assignment1.GeneratedMSBuildEditorConfig.editorconfig
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\obj\Debug\net6.0\Assignment1.AssemblyInfoInputs.cache
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\obj\Debug\net6.0\Assignment1.AssemblyInfo.cs
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\obj\Debug\net6.0\Assignment1.csproj.CoreCompileInputs.cache
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\obj\Debug\net6.0\Assignment1.dll
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\obj\Debug\net6.0\refint\Assignment1.dll
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\obj\Debug\net6.0\Assignment1.pdb
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\obj\Debug\net6.0\Assignment1.genruntimeconfig.cache
+E:\Degreed\csharp\Assignments\Assignment1\Assignment1\obj\Debug\net6.0\ref\Assignment1.dll
