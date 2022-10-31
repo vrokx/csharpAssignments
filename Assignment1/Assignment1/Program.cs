@@ -101,77 +101,67 @@ namespace Assignment1
             Console.WriteLine("Circumference of Circle : " + circumference);
         }
 
-        struct Books
+        public enum BookType
+        {
+            Magazine,
+            Novel,
+            ReferenceBook,
+            Miscellaneous
+        }
+        struct Book
         {
             public int bookId ;
             public string title;
             public int price;
-            public string bookType;
-
-            public void getValues(string bt, int p , string t, int id)
-            {
-                bookId = id;
-                title = t;
-                price = p;
-                bookType = bt;
-            }
-
-            public void display()
-            {
-                Console.WriteLine("Book_id :{0}", bookId);
-                Console.WriteLine("Title : {0}", title);
-                Console.WriteLine("Price : {0}", price);
-                Console.WriteLine("Book type : {0}", bookType);
-            }
+            public string bookType; 
         };
 
         static void BookInfo()
         {
+            int Nobook = 50;
+            Book[] books = new Book[Nobook];
+            int i, j, num, t = 0;
 
-            Console.WriteLine("Select by entering Number : ");
-            Console.WriteLine("1. Add New Book \n2. Retrive Book");
-            int input;
+            Console.WriteLine("How many books you want to store? : ");
+            int input = Convert.ToInt32(Console.ReadLine()); ;
 
-            if(int.TryParse(Console.ReadLine(), out input))
+            Console.Write("Enter {0} elements in the array \n\n", input);
+
+            for (j = 0; j < input; j++)
             {
-                if (input == 1)
-                {
-                    
-                }
-                else if (input == 2)
-                {
-                    Console.WriteLine("Retrive Function");
-                }
-                else
-                {
-                    Console.WriteLine("Wrong Input , Enter Number from menu only");
-                }
+                Console.WriteLine("Information of book {0} :", t);
+
+                Console.Write("Enter Id of the book : ");
+                books[j].bookId = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter Title of the book : ");
+                books[j].title = Console.ReadLine();
+
+
+                Console.WriteLine("**************************************");
+
+
+                Console.WriteLine("Select Type of the book : ");
+
+                foreach (int b in Enum.GetValues(typeof(BookType)))
+                Console.WriteLine((BookType)b);
+                Console.Write("Enter Book Type : ");
+                books[j].bookType = Console.ReadLine();
+
+
+                Console.WriteLine("**************************************");
+
+                Console.Write("Enter the Price of the book : ");
+                books[j].price = Convert.ToInt32(Console.ReadLine());
+                t++;
+                Console.WriteLine();
             }
-            else
+
+            for (i = 0; i < input; i++)
             {
-                Console.WriteLine("Invalid input , Enter only number");
+                Console.WriteLine("{0}: BookId = {1},  Title = {2} ,BookType = {3}, Price = {4} ", i + 1, books[i].bookId, books[i].title, books[i].bookType, books[i].price);
             }
-            
 
-
-            //Console.WriteLine("Enter Book ID : ");
-            //int bookId = Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine("Enter Book Title : ");
-            //string title = Console.ReadLine();
-            //Console.WriteLine("Enter Book Price : ");
-            //int price = Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine("Enter Book Type : ");
-            //string bookType = Console.ReadLine();
-
-            //Books Book1 = new Books();
-
-            //Book1.bookId = Convert.ToInt32(Console.ReadLine());
-
-            //for (int i = bookId; i <= bookId; i++)
-            //{
-            //    Console.WriteLine(i);
-            //}
-            
         }
 
             static void Main(string[] args)

@@ -1,43 +1,23 @@
-﻿using System;
-using System.IO;
-using System.Runtime;
-using System.Text;
+﻿//Check whether file is exists or not at particular location
+bool isFileExists = File.Exists(@"C:\ DummyFile.txt"); // returns false
 
-class FileOperations
-{
-    string path = @"E:\Degreed\csharp\Assignments\Assignment6\TextFiles\one.txt";
-    class DirectoryInfo
-    {
+//Copy DummyFile.txt as new file DummyFileNew.txt
+File.Copy(@"C:\DummyFile.txt", @"D:\NewDummyFile.txt");
 
-    }
+//Get when the file was accessed last time 
+DateTime lastAccessTime = File.GetLastAccessTime(@"C:\DummyFile.txt");
 
-    class Directory
-    {
+//get when the file was written last time
+DateTime lastWriteTime = File.GetLastWriteTime(@"C:\DummyFile.txt");
 
-    }
+// Move file to new location
+File.Move(@"C:\DummyFile.txt", @"D:\DummyFile.txt");
 
-    class Files
-    {
-        string text = System.IO.File.ReadAllText(@"E:\Degreed\csharp\Assignments\Assignment6\TextFiles\one.txt");
-        
-        public void fileRead()
-        {
-            Console.WriteLine(text);
-        }
-    }
+//Open file and returns FileStream for reading bytes from the file
+FileStream fs = File.Open(@"D:\DummyFile.txt", FileMode.OpenOrCreate);
 
-    class FileInfo
-    {
-        public void fileInfo()
-        {
-            FileInfo fi = new FileInfo(@"E:\Degreed\csharp\Assignments\Assignment7\TextFiles\one.txt");
-        }
-    }
+//Open file and return StreamReader for reading string from the file
+StreamReader sr = File.OpenText(@"D:\DummyFile.txt");
 
-    public static void Main()
-    {
-        FileOperations.Files fileRead = new FileOperations.Files();
-
-        fileRead.fileRead();
-    }
-}
+//Delete file
+File.Delete(@"C:\DummyFile.txt");

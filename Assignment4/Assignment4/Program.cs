@@ -16,7 +16,8 @@ class StackException
             try
             {
                 stackException.myStack.Push("PUSH");
-                Console.WriteLine("DID PUSH"); ;
+                Console.WriteLine("DID PUSH");
+                Console.ReadKey();
             }catch(Exception e)
             {
                 Console.WriteLine(e.ToString());    
@@ -27,7 +28,8 @@ class StackException
             try
             {
                 stackException.myStack.Pop();
-                Console.WriteLine("DID POP"); ;
+                Console.WriteLine("DID POP");
+                Console.ReadKey();
             }
             catch (Exception e)
             {
