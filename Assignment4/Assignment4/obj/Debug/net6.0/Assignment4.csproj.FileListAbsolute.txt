@@ -1,0 +1,15 @@
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\bin\Debug\net6.0\Assignment4.exe
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\bin\Debug\net6.0\Assignment4.deps.json
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\bin\Debug\net6.0\Assignment4.runtimeconfig.json
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\bin\Debug\net6.0\Assignment4.dll
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\bin\Debug\net6.0\Assignment4.pdb
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\obj\Debug\net6.0\Assignment4.csproj.AssemblyReference.cache
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\obj\Debug\net6.0\Assignment4.GeneratedMSBuildEditorConfig.editorconfig
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\obj\Debug\net6.0\Assignment4.AssemblyInfoInputs.cache
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\obj\Debug\net6.0\Assignment4.AssemblyInfo.cs
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\obj\Debug\net6.0\Assignment4.csproj.CoreCompileInputs.cache
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\obj\Debug\net6.0\Assignment4.dll
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\obj\Debug\net6.0\refint\Assignment4.dll
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\obj\Debug\net6.0\Assignment4.pdb
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\obj\Debug\net6.0\Assignment4.genruntimeconfig.cache
+E:\Degreed\csharp\Assignments\Assignment4\Assignment4\obj\Debug\net6.0\ref\Assignment4.dll

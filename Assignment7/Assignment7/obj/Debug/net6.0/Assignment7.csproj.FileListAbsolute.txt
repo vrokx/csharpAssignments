@@ -1,0 +1,15 @@
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\bin\Debug\net6.0\Assignment7.exe
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\bin\Debug\net6.0\Assignment7.deps.json
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\bin\Debug\net6.0\Assignment7.runtimeconfig.json
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\bin\Debug\net6.0\Assignment7.dll
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\bin\Debug\net6.0\Assignment7.pdb
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\obj\Debug\net6.0\Assignment7.csproj.AssemblyReference.cache
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\obj\Debug\net6.0\Assignment7.GeneratedMSBuildEditorConfig.editorconfig
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\obj\Debug\net6.0\Assignment7.AssemblyInfoInputs.cache
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\obj\Debug\net6.0\Assignment7.AssemblyInfo.cs
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\obj\Debug\net6.0\Assignment7.csproj.CoreCompileInputs.cache
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\obj\Debug\net6.0\Assignment7.dll
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\obj\Debug\net6.0\refint\Assignment7.dll
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\obj\Debug\net6.0\Assignment7.pdb
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\obj\Debug\net6.0\Assignment7.genruntimeconfig.cache
+E:\Degreed\csharp\Assignments\Assignment7\Assignment7\obj\Debug\net6.0\ref\Assignment7.dll
