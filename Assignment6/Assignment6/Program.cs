@@ -1,57 +1,106 @@
-﻿using System;
-class program
+using System.IO.Pipes;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
+using System.Transactions;
+
+namespace Banking_Event
 {
-    public static void Main()
+    public class Account
     {
-        int amount = 2034, deposit, withdraw;
-        int choice, pin = 1234, x = 0;
-        Console.WriteLine("Enter Your 4 Digit Pin ");
-        pin = int.Parse(Console.ReadLine());
-        while (true)
+        private int accountNumber;
+        private string customerName;
+        private int balance;
+        private int amount;
+        
+        public void deposit(int amount)
         {
-            Console.WriteLine("WELCOME TO YES BANK ATM SERVICE\n");
-            Console.WriteLine("1. Current Balance\n");
-            Console.WriteLine("2. Withdraw \n");
-            Console.WriteLine("3. Deposit \n");
-            Console.WriteLine("4. Cancel \n");
-            Console.WriteLine("***************\n\n");
-            Console.WriteLine("ENTER YOUR CHOICE : ");
-            choice = int.Parse(Console.ReadLine());
-            switch (choice)
+                this.balance += amount;
+            
+        }
+
+        public delegate void withdrawdelegate();
+        public event withdrawdelegate Transactionfailedevent;
+        public void  withdraw(int amount)
+        {
+            if(amount>balance || amount == balance)
             {
-                case 1:
-                    Console.WriteLine("\n YOUR CURRENT BALANCE IS Rs : {0} ", amount);
-                    break;
-                case 2:
-                    Console.WriteLine("\n ENTER THE WITHDRAW AMOUNT : ");
-                    withdraw = int.Parse(Console.ReadLine());
-                    if (withdraw % 100 != 0)
-                    {
-                        Console.WriteLine("\n PLEASE ENTER THE AMOUNT IN ABOVE 100");
-                    }
-                    else if (withdraw > (amount - 1000))
-                    {
-                        Console.WriteLine("\n SORRY! INSUFFICENT BALANCE");
-                    }
-                    else
-                    {
-                        amount = amount - withdraw;
-                        Console.WriteLine("\n\n PLEASE COLLECT YOUR CASH");
-                        Console.WriteLine("\n CURRENT BALANCE IS Rs : {0}", amount);
-                    }
-                    break;
-                case 3:
-                    Console.WriteLine("\n ENTER THE DEPOSIT AMOUNT");
-                    deposit = int.Parse(Console.ReadLine());
-                    amount = amount + deposit;
-                    Console.WriteLine("YOUR AMOUNT HAS BEEN DEPOSITED SUCCESSFULLY");
-                    Console.WriteLine("YOUR TOTAL BALANCE IS Rs : {0}", amount);
-                    break;
-                case 4:
-                    Console.WriteLine("\n THANK YOU…");  
-                        break;
+                Console.WriteLine("Transaction failed !");
+            }
+            else if(amount < balance)
+            {
+                this.balance -= amount;
             }
         }
-        Console.WriteLine("\n\n THANKS FOR USING YES ATM SERVICE");
+        public void raisemyevent()
+        {
+            Transactionfailedevent?.Invoke();
+        }
+       
+        
+        public void checkbalance()
+        {
+            Console.WriteLine($"your account balance is {this.balance}");
+        }
+
+        
+
+        Account(int accountno,string customername)
+        {
+            this.customerName = customername;
+            this.accountNumber = accountno;
+            balance =5000;
+
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to the Banking Application");
+            Console.WriteLine("Enter your Account Number");
+            int accountno = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter your name");
+            string customername = Console.ReadLine();
+            
+
+            Account ac1 = new Account(accountno,customername);
+            ac1.Transactionfailedevent += Ac1_Transactionfailedevent;
+
+
+
+            while (true)
+            {
+                Console.WriteLine("select the operation you want to perform : 1.deposit 2.withdraw 3.chcek balance 4.exit ");
+                int option = int.Parse(Console.ReadLine());
+
+                if (option == 1)
+                {
+                    Console.WriteLine("Enter your amount to deposit");
+                    int amount = int.Parse(Console.ReadLine());
+                    ac1.deposit(amount);
+                }
+                else if (option == 2)
+                {
+                    Console.WriteLine("Enter your amount to withdraw");
+                    int amount = int.Parse(Console.ReadLine());
+                    ac1.withdraw(amount);
+
+                }
+                else if (option == 3)
+                {
+                    ac1.checkbalance();
+
+                }
+                else if(option==4)
+                {
+                    break;
+                }
+            }
+        }
+
+        private static void Ac1_Transactionfailedevent()
+        {
+            Console.WriteLine("transaction failed !");
+        }
+
+        
     }
 }
