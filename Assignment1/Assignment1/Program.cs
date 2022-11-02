@@ -1,12 +1,14 @@
-﻿using System;
-using System.Xml.Linq;
+using System;
+using System.Linq;
 
 namespace Assignment1
 {
+    #region
     class Program
     {
         static void Calculator()
         {
+            try{
             Console.WriteLine("Enter First Number : ");
             int num1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter Second Number : ");
@@ -37,9 +39,14 @@ namespace Assignment1
                     break;
             }
         }
+            catch(Exception e){
+                Console.WriteLine("Error : " + e);
+            }
+        }
 
         static void AverageMarks()
-        {
+        {   
+            try{
             Console.WriteLine("Enter marks of students to calculate average marks");
             Console.WriteLine("1st Student's Mark");
             int student1 = Convert.ToInt32(Console.ReadLine());
@@ -56,9 +63,14 @@ namespace Assignment1
 
             Console.WriteLine("Average marks of five students = " + average);
         }
+            catch(Exception e){
+                Console.WriteLine("Error : " + e);
+            }
+        }
         
         static void SumOfArray()
         {
+            try{
             Console.WriteLine("Enter five numbers to sum");
             int[] arr = new int[5];
 
@@ -70,9 +82,14 @@ namespace Assignment1
             int total = arr.Sum();
             Console.WriteLine("Total of array :" + total);
         }
+            catch(Exception e){
+                Console.WriteLine("Error : " + e);
+            }
+        }
 
         static void SwapIntegers()
         {
+            try{
             Console.WriteLine("Enter Two Integers to Swap them");
             int FirstNum = Convert.ToInt32(Console.ReadLine());
             int SecondNum = Convert.ToInt32(Console.ReadLine());
@@ -87,9 +104,14 @@ namespace Assignment1
             Console.WriteLine("Numbers After Swap");
             Console.WriteLine("First Number : " + FirstNum + " Second Number : " + SecondNum);
         }
+            catch(Exception e){
+                Console.WriteLine("Error : " + e);
+            }
+        }
 
         static void CircleMethod()
         {
+            try{
             Console.WriteLine("Enter radius of circle to get Area and Circumference : ");
             int radius = Convert.ToInt32(Console.ReadLine());
 
@@ -99,6 +121,10 @@ namespace Assignment1
 
             Console.WriteLine("Area of Circle : " + area);
             Console.WriteLine("Circumference of Circle : " + circumference);
+        }
+            catch(Exception e){
+                Console.WriteLine("Error : " + e);
+            }
         }
 
         public enum BookType
@@ -118,9 +144,10 @@ namespace Assignment1
 
         static void BookInfo()
         {
+            try{
             int Nobook = 50;
             Book[] books = new Book[Nobook];
-            int i, j, num, t = 0;
+            int i, j, t = 0;
 
             Console.WriteLine("How many books you want to store? : ");
             int input = Convert.ToInt32(Console.ReadLine()); ;
@@ -163,9 +190,14 @@ namespace Assignment1
             }
 
         }
+            catch(Exception e){
+                Console.WriteLine("Error : " + e);
+            }
+        }
 
             static void Main(string[] args)
-            {
+            {   
+                try{
                 Console.WriteLine("Method Names :");
                 Console.WriteLine("1. Calculator");
                 Console.WriteLine("2. AverageMarks");
@@ -205,5 +237,10 @@ namespace Assignment1
                     Console.WriteLine("Wrong Input");
                 }
             }
+                catch(Exception e){
+                    Console.WriteLine("Error : " + e);
+                }
+            }
         }
+        #endregion
     }
